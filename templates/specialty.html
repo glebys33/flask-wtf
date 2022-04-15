@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if ('инженер' in prof) or ('строитель' in prof) %}
+        <h2>Инженерные тренажеры</h2>
+        <img src={{url1}}
+           alt="здесь должна была быть картинка, но не нашлась"
+            width=750 height=530>
+ {% else %}
+       <h2>Научные симуляторы</h2>
+        <img src={{url2}}
+           alt="здесь должна была быть картинка, но не нашлась"
+            width=750 height=530>
+ {% endif %}
+{% endblock %}
