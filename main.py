@@ -21,5 +21,30 @@ def training(prof):
     return render_template('specialty.html', **param)
 
 
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    param = {}
+    param['list'] = list
+    param['list_prof'] = [
+        'инженер-исследователь',
+        'пилот',
+        'строитель',
+        'экзобиолтог',
+        'врач',
+        'инженер по терроформингу',
+        'климатолог',
+        'специалист по радиоактивной защите',
+        'астронолог',
+        'гляциолог',
+        'инженер жизнеобеспеченности',
+        'метеоролог',
+        'оператор марсохода',
+        'киберинженер',
+        'штурман',
+        'пилот дронов',
+    ]
+    return render_template('professions.html', **param)
+
+
 if __name__ == '__main__':
-    app.run(port=8000, host='127.0.0.1')
+    app.run(port=8080, host='127.0.0.1')
